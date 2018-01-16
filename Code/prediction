@@ -6,7 +6,7 @@ import cv2
 import os
 
 
-#%% Evaluate one image
+#%% Evaluate one image   这里不是单个图像的预测是所有的测试样本
 #when training, comment the following codes.
 
 
