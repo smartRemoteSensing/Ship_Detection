@@ -8,7 +8,11 @@ def getfilename(path):
     pathdir = os.listdir(path)  # 文件名保存为列表
     # print(pathdir)
     newdir = list(pathdir)  # 为了不改变原始列表
-
+   
+    # 例如上级目录 GF3_MYN_SS_001269_E111.4_N19.7_20161105_L2_HHHV_L20001941573
+    # 图像文件名GF3_MYN_SS_001269_E111.4_N19.7_20161105_L2_HH_L20001941573.tiff
+    # 图像文件和上级目录相差了 HH 或者 HV
+    # #需要HH 就replace HV为 空， 需要HV就replace HV
     j = 0
     for i in pathdir:
         newdir[j] = i.replace('HV', '')
